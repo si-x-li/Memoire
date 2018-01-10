@@ -1,0 +1,422 @@
+/* 
+    Created on : Sep 15, 2017, 6:33:37 PM
+    Author     : Si Xun (Steven) Li
+*/
+
+/** Responsive control */
+.col-0   {width: 6.25%;}
+.col-1   {width: 12.5%;}
+.col-2   {width: 18.75%;}
+.col-3   {width: 25%;}
+.col-4   {width: 31.25%;}
+.col-5   {width: 37.5%;}
+.col-6   {width: 43.75%;}
+.col-7   {width: 50%;}
+.col-8   {width: 56.25%;}
+.col-9   {width: 62.5%;}
+.col-10  {width: 68.75%;}
+.col-11  {width: 75%;}
+.col-12  {width: 81.25%;}
+.col-13  {width: 87.5%;}
+.col-14  {width: 93.75%;}
+.col-15  {width: 100%;}
+
+/** Containers */
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+body#loginScreen {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../images/login/login_background.jpg");
+}
+
+div {
+    padding: 0px;
+    margin: auto;
+}
+
+div#navigator {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+div#content {
+    overflow: auto;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+}
+
+div#sidebar {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    overflow: hidden;
+}
+
+div.uploadBox {
+    border: solid 1px #ccc;
+    height: 250px;
+}
+
+div.mainArticle {
+    position: absolute;
+}
+
+div.loginContainer {
+    padding: 25px;
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+div.registrationContainer {
+    padding: 25px;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+div.imageContainer {
+    text-align: center;
+    padding: 25px;
+}
+
+div.outerDiv {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+div.innerDiv {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div.articleContainer {
+    overflow: auto;
+}
+
+div.uploadBox .uploaderButton {
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    top: 25px;
+}
+
+div.uploadBox .uploadOuter {
+    margin: 0;
+    padding: 0;
+    display: table;
+    position: absolute;
+    height: 200px;
+}
+
+div.uploadBox .uploadInner {
+    display: table-cell;
+    vertical-align: top;
+}
+
+img.recordBarButton {
+    padding: 5px;
+    margin: 10px 20px;
+    width: 48px;
+    height: 48px;
+    border: solid 2px #ccc;
+    border-radius: 3px;
+}
+
+img.menuHome {
+    width: 250px;
+    height: 100px;
+    background-color: #fff;
+}
+
+iframe {
+    width: 640px;
+    height: 360px;
+}
+
+@media only screen and (max-width: 700px) {
+    img.articleTable, iframe, img.personaPicture, img.profilePicture, 
+    img.articlePhoto {
+        width: 90%;
+    }
+}
+/** Anchors */ 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a.navigatorButton {
+    padding: 40px;
+    font-size: 20px;
+}
+
+a.inviteButton {
+    cursor: pointer;
+    color: #000;
+    background-color: #000;
+    padding: 1px;
+    border: solid 1px #ccc;
+}
+
+.buttonContent {
+    font-size: 20px;
+    padding: 0px 3px;
+}
+
+/** Progress bar */
+progress {
+    background: #000;
+}
+
+progress::-webkit-progress-value {
+    background: #000;
+}
+
+progress::-moz-progress-bar {
+    background: #000;
+}
+
+/** Complementary CSS */
+.clearLeft {
+    clear: left;
+}
+
+.left {
+    float: left;
+}
+
+.clearRight {
+    clear: right;
+}
+
+.right {
+    float: right;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+.noPad {
+    padding: 0px;
+}
+
+.noMargin {
+    margin: 0px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+/** Inputs */
+input[type="submit"], input[type="button"] {
+    font-size: 15px;
+    margin: 2px 15px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+input:disabled {
+    background: #fff;
+}
+
+input.loginBox {
+    width: 100%;
+    font-size: 1.0em;
+    padding: 5px;
+    margin: 2px 0px;
+    margin-bottom: 15px;
+    border: solid 1px #ccc;
+}
+
+input.submitLogin {
+    width: 100%;
+    font-size: 20px;
+    margin: 15px 1px;
+    border: solid 1px #0c3;
+    padding: 8px 1px;
+    color: #fff;
+    background-color: #0c3;
+}
+
+input.inviteBox {
+    width: 90%;
+    font-size: 20px;
+    border: solid 1px #ccc;
+}
+
+input.formBox {
+    width: 100%;
+    font-size: 1.0em;
+    padding: 5px;
+    border: solid 1px #ccc;
+}
+
+input[type="file"] {
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+label.uploadLabel {
+    cursor: pointer;
+}
+
+span.uploadButton {
+    width: 100%;
+    font-size: 15px;
+    color: #777;
+}
+
+textarea {
+    font-size: 1.0em;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+    border: solid 1px #ccc;
+}
+
+select {
+    border: solid 1px #ccc;
+    width: 100%;
+    padding: 5px;
+    font-size: 1.0em;
+}
+
+/** Colors */
+.colorCharcoal {
+    color: #36454f;
+}
+
+.colorHyperBlue {
+    color: #66afe9;
+}
+
+.colorWhite {
+    color: #fff;
+}
+
+.darkBackground {
+    background-color: rgb(10, 10, 10);
+}
+
+.lightBackground {
+    background-color: rgb(225, 225, 225);
+}
+
+.colorBlack {
+    color: #000;
+}
+
+/** Font weight */
+.textIntro {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.textExtraLargeTitleFixed {
+    padding: 0px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.textExtraLargeTitle {
+    padding: 10px 0;
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.textTitle {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.textSubTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.textExtraLargeContent {
+    font-size: 25px;
+}
+
+.textLargeContent {
+    font-size: 20px;
+}
+
+.textContent {
+    font-size: 16px;
+}
+
+.textError {
+    font-size: 15px;
+    color: #f00;
+}
+
+.notification {
+    border-radius: 10px;
+    border: solid 1px red;
+    color: #fff;
+    padding: 0px 5px;
+    background-color: red;
+}
+
+.success {
+    color: #0c3;
+    background-color: #eee;
+}
+
+/** Alignment */
+.textAlignCenter {
+    text-align: center;
+}
+
+.textAlignLeft {
+    text-align: left;
+}
+
+.textAlignRight {
+    text-align: right;
+}
+
+.textAlignJustified {
+    text-align: justify;
+}
+
+/** Fonts */
+.textLato{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.textArial{
+    font-family: "Arial", sans-serif;
+}
+
+/** Backgrounds */
+.backgroundCloudComputing {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../images/background/cloud-computing.jpg");
+}
